@@ -1,0 +1,20 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducción}{3}{}%
+\contentsline {section}{\numberline {2}Transformada de Laplace}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Ejemplo:}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Teorema 31. Linealidad de la transformada de Laplace.}{4}{}%
+\contentsline {section}{\numberline {3}Teorema 39. Transformada de Laplace de la derivada.}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Ejemplo:}{5}{}%
+\contentsline {section}{\numberline {4}Teorema 42. Transformada de Laplace de la integral de una\\ función.}{5}{}%
+\contentsline {subsection}{\numberline {4.1} Demostración: }{5}{}%
+\contentsline {section}{\numberline {5}Fracciones parciales.}{6}{}%
+\contentsline {subsection}{\numberline {5.1}a) Factores lineales distintos}{6}{}%
+\contentsline {subsection}{\numberline {5.2}b) Factores lineales repetidos}{6}{}%
+\contentsline {subsection}{\numberline {5.3}c) Factores cuadráticos distintos}{6}{}%
+\contentsline {subsection}{\numberline {5.4}d) Factores cuadráticos repetidos}{7}{}%
+\contentsline {subsection}{\numberline {5.5} Ejemplo primer caso }{7}{}%
+\contentsline {section}{\numberline {6}Solución de problemas con condiciones iniciales utilizando la transformada de Laplace.}{8}{}%
+\contentsline {subsection}{\numberline {6.1}Ejemplo:}{9}{}%
+\contentsline {section}{\numberline {7}Ejercicios propuestos en Matlab}{10}{}%
+\contentsline {section}{\numberline {8}Conclusiones}{11}{}%
+\contentsline {section}{\numberline {9}Bibliografía }{11}{}%

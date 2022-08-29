@@ -1,0 +1,366 @@
+\documentclass[T1]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\newgeometry{bottom=3cm, top=3cm, left=3cm, right=3cm}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{ragged2e}
+%\usepackage{blindtext}
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=40mm]{logo_unicauca.jpg}
+   
+    \label{fig:my_label}
+\end{figure}
+
+\begin{center}
+
+\bfseries\large        UNIVERSIDAD DEL CAUCA\par
+\vspace{0.5
+cm}
+\scshape\large Facultad 
+de Ingenieria civil\par
+\vspace{2.5cm}
+\scshape\Large TRANSFORMADA DE LA PLACE\par
+\vspace{2.5cm}
+    \large Autor: {NAYIBE ALEJANDRA RUIZ COLLAZOS}\par
+    \vspace{2cm}
+    \large Presentado a: {JHONATAN COLLAZOS RAMIREZ}\par
+  \vspace{2cm}
+  \large POPAYAN CAUCA}\par
+    \large{29 de agosto de 2022}\par 
+   
+\end{center}
+
+\pagebreak
+
+\pagestyle{fancy}
+\lhead{Ecuaciones diferenciales}{}
+\rhead{}{\nouppercase{\leftmark}}
+\lfood{}{\thepage} 
+\rfoot{}{}
+\cfoot{}{}
+\chead{}{}
+\tableofcontents
+\vspace{4cm}
+
+
+\section{Introducción}\\
+
+Se abordaran las definiciones de transformada de la place de una función, transformada de la place de derivadas  e integrales, fracciones parciales.
+Tambien se muestra la solución de un problema con valor inicial aplicando transformada de Laplace.\\
+
+
+\section{Transformada de Laplace}\\
+
+Definición 32.\
+sea $\mathscr{f}$ definida \forall \ t \geq$ 0.\ La transformada de Laplace de $\mathscr{f}$ se define como:\\
+$\mathcal{L}\ ${$({f(t))\)=F(p)$=\int_0^\infty e^{-pt}($f(t)$\mathrm{d}t=\lim_{b\rightarrow\infty}\int{_0^\ b}\ e^{-pt}\\${f(t)}$\mathrm{d}t. . . . .  (1)\\$
+Siempre que la integral sea convergente.\\
+
+\textbf{Nota:}\\
+Los valores de P para los cuales la integral impropia en (1) sea convergente, determinan el
+dominio de la transformada de Laplace.\\
+
+\subsection{Ejemplo:}
+Encontremos la transformada de Laplace de la función f(t)=t\\
+Solución:\\
+f(t)=t está definida \forall \ t \geq$ 0, entonces de la definición 32, tenemos que:\\
+
+$\mathcal{L}\{t\}=\int_0^\infty  e^{-pt}\((t)\ {d}t\\$
+Si p\neq
+0, entonces \int_0^\infty e^{-pt}\((t) dt\) = \lim_{b\rightarrow\infty}\((-\frac{te}{p} \) ^{-pt}\mid_0^\\b$\ +  \ 1/p$\)\ $\int_0^\infty  e^{-pt}\(dt\))$\\
+\int_0^\infty e^{-pt}\((t)dt\) = \lim_{b\rightarrow\infty}\ -e^{-pt}\(\((\frac{t}{p}+\frac{1}{p^2}\))\mid_0^\\b$\ = \lim_{b\rightarrow\infty} \left[-e^{-pb}\(( \frac{b}{p}\ +\frac{1}{p^2}\))\ + 
+\ 1/p^2}$\) ]\\
+
+Analicemos el limite obtenido.\\
+
+p\ < 0\Longrightarrow\lim_{b\rightarrow\infty}\ +\left[-\underline {e^{-pb}\(( \frac{b}{p}\ +\frac{1}{p^2}\))}\ + $ \frac{1}{p^2}\)] = \+\infty+\longrightarrow\int
+_0^\infty\ e^{-pt}\ tdt\ es\ divergente\\
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . \-\infty \ $(-\infty)\\
+p>0\Longrightarrow\lim_{b\rightarrow\infty+}\left[-e^{-pb}\(( \frac{b}{p}\ +\frac{1}{p^2}\))\ + $\frac{1}{p^2}\)]= \lim_{b\rightarrow\infty+}[- \underline {\frac{1}{e^pb}\ ( \frac{b}{p}\ +\frac{1}{p^2}}\))\ +\ 1/p^2}$\) ] \\
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . 0\ $(+\infty \)$)\\
+
+*\lim_{b\righta\rrow\infty+}\( \frac{1}{p^2}\ =\frac{1}{p^2}\)\\
+
+*\lim_{b\rightarrow\infty}\ -(\frac{b}{p}\ +\frac{1}{p^2}\))/e^{pb}= \lim_{b\rightarrow\infty+}-(\frac{1}{p}\))/p^{epb}=0\\
+
+*\Longrightarrow\lim_{b\rightarrow\infty+}\ [-\underline { \frac{1}{e^pb}\ ( \frac{b}{p}\ +\frac{1}{p^2}}\))]$\ +\ 1/p^2}$\) existe\\
+. . . . . . . . . . . . . . . . . . .0\ $(+\infty \)$)\\
+Por\ lo\ tanto \int
+_0^\infty\  e^{-pt}\ tdt\ es\ convergente.\\
+
+Luego,\ por\ la\ definición\ 32:
+
+$\mathcal{L}\{
+t\}=\int_0^\infty e^{-pt}t\mathrm{d}t=\lim_{b\rightarrow\infty^{+}}\ [-\ {e^-pb}\ ( \frac{b}{p}\ +\frac{1}{p^2}\))\ + \ 1/p^2}$\ ]= \ 1/p^2}$\)   , p $>$ 0\\
+\textbf{\center\mathcal{L}\{t\}= F(p)$= \frac{1}{p^2}\ }}\ , p > 0}}\\
+
+\subsection{Teorema 31. Linealidad de la transformada de Laplace.} si f y g son funciones cuyas\\ transformadas de Laplace existen y sea K un número real cualquiera, entonces:\\
+a) $\mathcal{L}\{kf(t)\}=  k\mathcal{L}\{f(t)\}\\
+b) \mathcal{L}\{f(t)\ +{g(t)\}= \mathcal{L}\{f(t)\}+\mathcal{L}${$\{$ g(t)\}\\\
+
+
+\section{Teorema 39. Transformada de Laplace de la derivada.}\\
+
+Si f\(\)(t)\ , f'\(\)(t)\ , ..., f \(^(^n^-^1^)\ (t)\ , son\ continuas\  {\forall\ t\geq 0\ y \de\ orden\ exponencial\ y\ 
+si  \ f^(^n^)\ (t)\
+es\ continua\\\
+
+a\ tramos\ para\  t\geq 0\ , entonces:\\
+
+$\mathcal{L}\{ f \(^(^n^)\ (t)\}= p^n\mathcal{L}\{ f \ (t)\}- p^(^n^-^1^)\ f\ (0)\ - p^(^n^-^2^)\ f' \(0)\...pf^(^n^-^2^)\ (0)\ - f^(^n^-^1^)\ (0)\\
+
+\textbf{Nota:}\\
+Del teorema 39:\\
+*$\mathcal{L}\{ f'\ 
+ (t)\}= pF(p)- \ f\ (0)\ \
+
+*$\mathcal{L}\{ f''\ (t)\}= p^2 F(p)- \ pf\ (0)\ -  f'\(0)\
+
+*$\mathcal{L}\{ f'''\ (t)\}= p^3 F(p)- \ p^2f\ (0)\ -  pf'\(0)\ -f''(0)\\
+
+\subsection{Ejemplo:}\\
+Dada f\ (t) = sen 2t , utilizar el teorema 39 para obtener $\mathcal{L}\($(f´´$(t))} .\\
+
+
+\textbf{Solución:}\\
+  *f\(\)(t)\ , f´\(\)(t)\ y f´´\ (t)\ , son\ continuas\  {\forall\ t\geq 0\ \\
+*f\(\)(t)\ y  f´\(\)(t)\ son\ de orden exponencial\  {\forall\ t\geq 0\\
+*f\(\)(t)\ = sen2t \Longrightarrow\  f´\(\)(0)\ = 0\\
+*f´\(\)(t)\ = 2cos2t \Longrightarrow\  f´\(\)(0)\ = 2\\
+De lo anterior aplicando el T.39\\
+
+\Longrightarrow\mathcal{L}\{ f''\ (t)\}= p^2 F(p)- \ pf\ (0)\ -  f'\(0)\\
+\mathcal{L}\{ f''\ (t)\}= p^2 \mathcal{L}\{sen2t\ (t)\}- p(0) -2 = 
+\ ( \frac{2p{^2}}{p^2 + 4}\ - \ 2 \))\\
+\textbf{\center\mathcal{L}\{f´´\ (t)\}= \textbf{-$\frac{8}{p^2 +4}}\ }}}\\
+
+\left\section{Teorema 42. Transformada de Laplace de la integral de una\\ 
+función.}$\left si \\
+$\mathcal{L}\{f(t)\}=F(p)$, entonces\\
+$\mathcal{L}\{ \int_0^t\ f(t) dt\}= \frac{1}{p}\mathcal{L}\{ \
+ F(t)\}$=\(\frac{1}{p}\)}}\ f(p)\\
+
+\subsection{ Demostración: }
+Aplicando la definición de transformada de Laplace tenemos que:\\
+$\mathcal{L}\{ \int_0^t\ f(t) dt\}=
+\int_0^\infty  e^{-pt}\(\)(\int_0^t\ f(t) dt\})\) dt\ (1)\\
+
+
+u=\int_0^t\ f(t)\ dt\Longrightarrow\ du =\ f(t) dt\
+
+dv=e^{-pt}\(\) dt\ \Longrightarrow\ v= -\(\frac{e^-pt}{p}\)}}\\
+
+(1)\Longrightarrow\mathcal{L}\{$\int_0^t\ f(t) dt\}\ =\lim_{b\rightarrow\infty}\usepackage[-\(\frac{e^-pt}{p}\int_0^t\ f(t) dt\mid_0^\\b$ ]\ +{$\int_0^\infty\(\frac{e^-pt}{p}\ f(t) dt\\
+
+$\mathcal{L}\{$\int_0^t\ f(t) dt\}\ = \underline {\lim_{b\rightarrow\infty}\ - \frac{1}{pe^-^p^b}}\int_0^b\underline { f(t) dt }\ +
+\lim_{b\rightarrow\infty} \frac{e^-^p^(^0^)}{p}\underline{\int_0^0\ f(t) dt}\ + \frac{1}{p}\ \int_0^\infty\ e^-^p^t\ f(t) dt\\
+. . . . . . . . . . . . . . . . . . . . .. . . .. . . . . . . . . . . . . . . . . . . 0. . . . . . . . . . . .  . . . . . . existe. . . . . .. . . . . . . . . . . . . . . . . . . .  . . . . . . . . 0
+
+
+$\mathcal{L}\{$\int_0^t\ f(t) dt\}\ = \frac{1}{p}\ \int_0^\infty\ e^-^p^t\ f(t) dt\\
+\center$\mathcal{L}\{$\int_0^t\ f(t) dt\}\ =\ \frac{1}{p}${$\mathcal{L} (f(t))}$}\\
+
+\left\section{Fracciones parciales.}
+Una función racional  \(\frac{Px}{Qx}\)}}\ puede ser llevada a otra equivalente dependiendo del divisor\\ 
+Q(x)\neq\ 0\ de\ la\ misma, de\ tal\ modo\ que\ el\ divisor\ puede\ presentar\ terminos\ que\ permitan\\ factorizarlo.\\
+
+Cada caso de los indicados permite formar una fracción racional equivalente a la dada del modo siguiente:\\
+
+\subsection{a) Factores lineales distintos}
+\(\frac{Px}{Qx}\)}}\ = \(\frac{Px}{(a_1 x+b_1)(a_2 x+b_2)(a_3 x+b_3)..(a_n x+b_n) }\)}}\\
+Osea que: Q(x)=(a_1 x+b_1)(a_2 x+b_2)(a_3 x+b_3)..(a_n x+b_n)\\
+ 
+\subsection{b) Factores lineales repetidos}
+
+\(\frac{Px}{Qx}\)}}\ = \(\frac{Px}{(a_x+b)(a_x+b)(a_x+b)..(a_x+b) }\)}}\\
+Es decir que: Q(x)=(a_x+b)(a_x+b)(a_x+b)..(a_x+b) =(a_x+b)^n\\
+
+\subsection{c) Factores cuadráticos distintos}
+\(\frac{Px}{Qx}\)}}\ = \(\frac{Px}{(a_1 x^2+b_1 x+c_1)(a_2 x^2+b_2 x+c_2)(a_3 x^2+b_3 x+c_3)..(a_n x^2+b_n x+c_n) }\)}}\\
+Ahora Q(x)=(a_1 x^2+b_1 x+c_1)(a_2 x^2+b_2 x+c_2)(a_3 x^2+b_3 x+c_3)..(a_n x^2+b_n x+c_n)\\
+
+\subsection{d) Factores cuadráticos repetidos}
+
+\(\frac{Px}{Qx}\)}}\ = \(\frac{Px}{(a_x^2+b_x+c)(a_x^2+b_x+c)(a_x^2+b_ x+c)..(a_x^2+b_x+c) }\)}}\\
+Siendo Q(x)=(a_x^2+b_x+c)(a_x^2+b_x+c)(a_x^2+b_x+c)..(a_x^2+b_x+c)\\
+
+\subsection{ Ejemplo primer caso }\\
+a) Factores de primer grado distintos.\\
+Sea la función racional \(\frac{Px}{Qx}\)}}\ = \(\frac{5x-3}{(x+1)(x-3)}\)}}\\
+Esta función racional puede ser llevada a otra equivalente, dependiendo del divisor Qx{\neq\ } 0\\
+
+de la misma, de tal modo que el divisor presenta dos factores lineales distintos (x+1) y (x+3).\\
+A partir  de la fraccion dada \ {${\frac{5x-3}{(x+1)(x-3)}\)}}\ podemos construir dos fracciones cuya suma sea equivalente a la fraccion conocida: \ {${\frac{A}{x+1}\)}}\ +  {${\frac{B}{x-3}\)}}\\
+
+Es decir: \(\frac{5x-3}{(x+1)(x-3)}\)}}\ = {${\frac{A}{x+1}\)}}\ Multiplicando ésta ecuación por el mínimo común multiplo (x+1) y (x+3), tenemos 5x-3= A(x-3) + B(x+1)\\
+Multiplicando  a la derecha de la igualdad nos queda 5x-3= Ax-3A + Bx + B\\
+Asociando en la derecha los terminos semejantes: 5x-3= (A+B)x + (-3A + B)\\
+Igualando los términos semejantes:\\
+En x: \. . . . . . . . . . . . . . . . .  . . . . . . . 5x= (A+B)x  (I)\\
+Terminos independientes: . . .  . . . . .-3= -3 A+B (II) \\
+De I dividiendo entre x la expresión: 5= A + B (I)\\
+. . . . . . . . . . . . . . . . . . . . .  . . . . .  .-3=-3 A+B (II)\\
+Resolviendo simultáneamente las ecuaciones I y II mediante reducción:\\
+Multiplicando la ecuación I por 3:. . . 15=3A + 3B\\
+. . . . .  . . . . . . .  . . . . . . . . . . . . . . .\underline{-3= -3A+ B}\\
+Sumando las dos ecuaciones anteriores  12 = 4B  \rightarrow\ B= 12/4 =3 \rightarrow\ B=3\\
+
+Sustituyendo B en la ecuación I: . . . . .5= A+3\rightarrow\ A= 5-3 = 2\rightarrow\  A= 2\\
+
+Con los valores de A, B encontrados tenemos:
+
+\(\frac{5x-3}{(x+1)(x-3)}\)}}\ = {${\frac{2}{x+1}\)}}\ + {${\frac{3}{x-3}\)}}\\
+
+La suma de las dos fracciones de la derecha son equivalentes a la fracción inicial conocida.\\
+
+\section{Solución de problemas con condiciones iniciales utilizando la transformada de Laplace.}  \\
+*\ a{_n}(t)\(\frac{d^n y}{dt^n}\)}}\ +  a{_n_-_1}(t)\(\frac{d^n^-^1 y}{dt^n^-^1}\)}}\ +...+\ a{_1}(t)\(\frac{d y}{dt}\)}}\ +a{_0}(t)y\ = g(t)\\
+*y(0)= y1\\
+* y´(0)= y2\\
+ .\\
+ .\\
+* y ^(^n^-^2^)\ (0)=y{_n_-_1}\\
+*y ^(^n^-^1^)\ (0)=y{_n}\\
+\Longrightarrow\ *$
+ (1)\\
+Bajo ciertas condiciones, problemas con condición inicial de la forma (1), pueden resolverse haciendo uso de las propiedades de la Transformada de Laplace. Estas condicicones son , por ejemplo:\\\
+a) Existencia de la Transformada de Laplace de g(t) (función de entrada).\\
+b) Los coeficientes de la variable dependiente y de sus derivadas sean funciones polinomiales.\\
+c) Existencia de la Transformada de Laplace inversa.\\\
+
+En tal caso, el procedimiento para hallar la solución de (1), utilizando la Transformada de Laplace, sigue los siguientes pasos:\\
+
+Paso1: Aplicar la Transformada de Laplace y propiedades de la Transformada de Laplace que den a lugar en la ecuación diferencial que describe (1), locual implicara de manera inmediata el aplicar las condiciones iniciales del problema, dado que se debe utilizar el teorema 39 (T.L. de la derivada).\\
+En este paso, resulta o una ecuación en la variable F(p) o una ecuación diferencial.\\
+
+Paso 2: Despejar F(p) y verificar que \lim_{p\rightarrow\infty +}\  F(p)\ = 0\\
+
+Paso 3: Aplicar la transformada inversa y las propiedades de la transformada inversa para\\ obtener f(t).\\
+
+\subsection{Ejemplo:}
+Obtengamos la solución del problema con condición inicial:\\
+
+ty´´-y´= t^2   (1)\\
+. . .  . . . . .  . y(0)= 0  \   (2)\\
+  
+\textbf{ Solución:}\\
+Paso 1: Apliquemos la transformada de Laplace en (1).\\
+$\mathcal{L}\{ty$´´$-y$´$\}$}$\ = \mathcal{L}\{t^2$\}$}\ \Leftrightarrow \mathcal{L}\{ty$´´$\}$}$\ - \mathcal{L}\{y$´$\}$}$\ =  \frac{2}{p^3}\                         (3)\\
+
+Aplicando derivada de la transformada y transformada de la derivada y la condición (2) del\ problema\\ se tiene que:\\
+* $\mathcal{L}\{ty$´´$\}$}$\ = - \frac{d}{dp}\ [$\mathcal{L} \{ y$´$´´$´\}$}$\-\($ ]\ = -\(\frac{d }{dp}\)}}\ [\ p^2 F(p) - f$´$(0)\($ ]\\      * $\mathcal{L}\{y$´´$\}\ =  p^2\ F(p)-pf(0)-f$´(0)\\
+* $\mathcal{L}\{y$´$\}\ =  pF(p)-f(0)\\
+*\Longrightarrow\  (4)
+\\
+
+Dado que f(0)= 0 y f(0) = 0 es una constante, entonces \(\frac{d }{dp}\)}}\ [\ f´(0)\($ ]\ = 0. Entonces en\ (4):\\
+
+\bullet \mathcal{L}\{ty$´´$\}$}$\ = $- $\frac{d}{dp}$\ [\ p^2\ F(p)\($ ]\ = - \ [\ 2p F(p) + p^2\ f$´(p)\($ ]\\           
+\bullet\mathcal{L}\{ y$´´$\}$}$\ = p^2\ f$(p)\\
+\bullet\mathcal{L}\{y$´$\}$}$\ = p\ f$(p)\\
+\bullet\ (3) \Rrightarrow\ -[\ 2p F (p) + p^2\ F $´(p)\($ ]\ - pF(p) =\(\frac{2 }{p^3}\)}}\\
+
+-[\ 2p F (p) + p^2\ F $´(p)\($ ]\ - pF(p) =\(\frac{2 }{p^3}\)}}\Leftrightarrow \underline{\ F$´}\underline{(p)}\ \underline{ +\ 3/ p F(p)} = - \underline{\(\frac{2 }{p^3}\)}}\        . . . . . .  (5)\\
+. . . . . .  . . . . . . .  . . . . . . . . . . . . . . .Ecuación diferencial lineal\\
+
+Paso 2: Obtengamos la solución de (5)\\
+
+F(p)= e{^-^{\int_ {^{\frac{3}{p}\ ^{dp}}\)}}\ [ \int_\ e{^{\int_ {^}}} \frac{3}{p}\ {{dp}} \ {{$(\ - $\frac{2 }{p^5}\)}} )${dp} + c ] = e^{-3lnp }\ [ \int_\ e^{3lnp} \ ${{(\ - $\frac{2 }{p^5}\)}} )${dp} + c ]\\
+F(p)= p{-^3 [ \int_\ p^3 $\ {{(\ - $\frac{2 }{p^5}\)}} )${dp} + c ] = p^-^3$ \ (-2 \int_\ p^{-2}\ dp\ $+ \ c\ )\\
+F(p)= $\mathcal{L}\{f(t)\}= {p^-^3}( \(2p^-^1 +c)= 2 \frac{1 }{p^4}\)}}  \ + c\ { $\frac{1 }{p^4}\)}}. . . . . . . . .     (8)\\
+
+\lim_{p\rightarrow\infty\+ $ \ =\lim_{p\rightarrow\infty\+ ($2\ $\frac{1 }{p^4}\)}}  \ + c\ { $\frac{1 }{p^4}\))$}}= 0\\
+
+Paso 3: Apliquemos la transformada de Laplace inversa en (8).
+
+$\mathcal{L}^{-1}\{f(p)\}= f(t)\ = \mathcal{L}^{-1}\{${2} \ $\frac{1 }{p^4}\)}} + c\  { $\frac{1 }{p^3}\))$}}\ = 2 \ \mathcal{L}^{-1}\ \{$ \ { $\frac{1 }{p^4}\}$} $ + c\mathcal{L}^{-1}\ \{$ \ { $\frac{1 }{p^3}\}$} $\\
+
+f(t)\ = \(\frac{2 }{3!}\)}}  \ $\mathcal{L}^{-1}\{${ \ 3!/p^{4}}$\}}$\  + c/2!\ \mathcal{L}^{-1}\{${ \ 2!/p^{3}}$}$\}}$\\
+
+ \textbf{f(t)\ = \(\frac{1 }{3}\)}}\ t^3$\ + \(\frac{c }{2}\)}}\ t^2$\ }} . . . . . . . . .   (9)}\\
+ 
+Para cada C \in\ R$\, en (9) se obtiene una función que es solución del problema. es decir, el problema tiene infinitas soluciones.\\
+\begin{flushleft}
+\left\section{Ejercicios propuestos en Matlab}\\\
+
+1. Transformada de Laplace:\\
+$\mathcal{L}\{s\} = \int_0^\infty\ e^-^s^t\ f$(t) dt\. . . . . . . f(t)=t\\
+$\mathcal{L}\{s\} =\int_0^\infty\ t \  e^-^s^t\ dt\\
+Resuelvo la integral por partes\\
+Sea u= t \ . . . . . . . . . . . . . .          dv=  e^-^s^t\ dt\\
+du= dt\. . . . . . . .  . . . .  . . .  . . . . .v=\(-\frac{e^-^s^t }{s}\)}}\\
+Sustituyendo en:  uv -\int v du\\
+\(- \frac{t e^-^s^t }{s}\)}}\ - \int \ - \frac{ e^-^s^t }{s}\)}}\ dt\\
+\(- \frac{t e^-^s^t }{s}\)}}\ + \( \frac{1 }{s}\)}}\ \int \ { e^-^s^t \)}}\ dt\\
+ \mathcal{L}\{s\}\ =\(- \frac{t e^-^s^t }{s}\)}}\ + \( \frac{e^-^s^t }{s^2}\)}}\)}}\mid_0^\infty\\
+$\mathcal{L}\{s\}= -(\infty\ e^-\infty\ / \ s)\ - ( e^\infty\ / \ s^2)\ + ( 0 \ e^ 0 / \ s)\ + ( e^0 \ / \ s^2)\\
+. . . . .= -(\infty\  / \ s e^\infty\ $)\ - ( 1 / \ s^2 \e^\infty\ )$\\
+. . . . .= 0 - 0 + 0 + ( 1 / \ s^2)\\ 
+$\Rrightarrow\ \mathcal{L}\{s\}= ( 1 / \ s^2)
+
+2. Transformada de la place de una derivada:\\
+
+$\mathcal{L}\{t\}=\int_0^\infty\  f$´(t) dt\ e^-^s^t\ dt\\
+Resuelvo la integral por partes\\
+Sea u= \ e^-^s^t . . . . . . . . . . . . . .          dv= \  f$´(t) dt\\
+du= - s e^{st}{dt}. . . . . . . .  . . . . .v= f(t)\\
+Sustituyendo en:  uv -\int v du\\
+=\ e^-^s^t\  f(t)\mid_0^\infty\ - \int_0^\infty\ - se^{-st}\ f(t) dt\ 
+
+Ahora 
+
+=\lim_{t\rightarrow\infty\ } \ e^{-st}\ f(t) - \lim_{t\rightarrow\ }\ 0 \ e^{-s(0)}}\ f(0)\ + s \int_0^\infty\ e^{-st}\ f(t) dt\\ 
+(e^{-st}=\frac{1 }{e^{st}}\)$)}}\)\\
+(e^{-st}=\frac{1 }{e^\infty\ \)$)}}\) = 0\\
+= -\ f(0)\ + s\underline{\int_0^\infty\ e^{-st}\ f(t) dt}}$$\\
+
+. . . . . . . .. . . .  .$\mathcal{L}\{t\}\\
+
+\Rrightarrow\ -  \ f(0)\ + s\ \mathcal{L} \{${$}\ $f (t)\}\\
+
+3. Transformada de Laplace de una integral:\\
+\int_0^\ t\ $ } \ f(u) du= g(t)\\
+
+Sustituimos en : $\mathcal{L} \{${$}\ $g´ (t)\} = s $\mathcal{L} \{${$}\ $g (t)\} -g(0). \\
+
+$\mathcal{L}\{d\ ({\int_0^\ t\ {$}\ $f (u)du)\}}\ = s \mathcal{L}\{ \ \int_0^\ t\ {$}\ $f (u)du)\}}\\
+
+\(\frac{1 }{s}\) }$ \mathcal{L}\ {$}\{${$}\ $f (u)\}}\ = \ }$ $\mathcal{L}\ ${${$}\{${$}\ \int_0^\ t\ {$}\ $f (u)du)\}}\ 
+
+\section{Conclusiones}
+-Se realizo la integración de dos áreas fundamentales de la ingenieria, para lo cual se desarrollo diferentes aplicaciones de la transformada  de Laplace que posteriormente programe en Matlab.\\
+
+Quiero resaltar la importancia de la nueva herramienta de trabajo que he adquirido, con el lenguaje  de programacion LaTex, la cual genera textos de alta calidad. Overleaf cuenta con un amplio contenido por explorar, que me permitira una excelente presentación para mi trabajo de grado.\\
+
+\section{Bibliografía }
+
+GUIAS DE CLASE ECUACIONES DIFERENCIALES, Lorena Maritza Terrios Guzman.\\
+(1) ZILL, Dennis. Ecuaciones Diferenciales con aplicaciones de modelado. Novena edicion. Cengage Learning. Mexico.2009.\\
+(2) EDWARDS, Henry, Penney David. Ecuaciones Diferenciales. Segunda edicion. Pearson. Mexico.2001.\\
+(3) NAGLE, R. Kent, Ecuaciones Diferenciales y problemas con valores de frontera. Cuarta edicion. Pearson.
+(4) ESCOBAR, Jaime. Ecuaciones Diferenciales con aplicaciones en Maple. Texto en la pagina web: http:\\matematicas.udea.edu.co/jescobar/\\
+(5) VARONA, M. Juan Luis. Metodos Clasicos de resolucion de Ecuaciones Diferenciales Ordinarias. Universidad de La Rioja. Segunda edicion. Logroño.1996.\\
+(6) ROSS,Shepley L. Differential equations. Tercera edicion. interamericana S.A. 1982.
+(7) AYRES, Frank. Teoria y problemas de Ecuaciones Diferenciales. Mcgraw- Hill.Madrid. 1970.\\
+(8)PROFESOR PARTICULAR, www.profesorparticularpuebla.com,Transformada de Laplace de una derivada e integral, https://youtu.be/JoAnzA-dLhw?list=PLDrYCU02ie-Eazxk7H0s0bGMewU6aE19M\\
+(9)PROFESOR PARTICULAR, www.profesorparticularpuebla.com,Transformada de Laplace de f(t)=thttps://youtu.be/exEr1YjHC80?list=PLDrYCU02ie-Eazxk7H0s0bGMewU6aE19M\\
+(10)Dr. Trefor Bazett, Intro to LateX:Learn to writebeautiful math equations II part 1, https://youtu.be/Jp0lPj2-DQA
+(11) LaTex - GeoGebra Manual,https://wiki.geogebra.org/es/LaTeX\\
+}
+
+
+
+\end{document}
+
+
